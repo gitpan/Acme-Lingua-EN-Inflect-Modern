@@ -17,13 +17,13 @@ Acme::Lingua::EN::Inflect::Modern - modernize Lingua::EN::Inflect rule's
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
-  $Id: /my/cs/projects/Acme-Lingua-EN-Inflect-Modern/trunk/lib/Acme/Lingua/EN/Inflect/Modern.pm 30776 2007-02-26T01:49:53.330332Z rjbs  $
+  $Id: /my/cs/projects/Acme-Lingua-EN-Inflect-Modern/trunk/lib/Acme/Lingua/EN/Inflect/Modern.pm 30779 2007-02-26T16:11:46.053747Z rjbs  $
 
 =cut
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 =head1 SYNOPSIS
 

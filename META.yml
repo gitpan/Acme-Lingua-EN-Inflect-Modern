@@ -1,11 +1,12 @@
 --- #YAML:1.0
 name:                Acme-Lingua-EN-Inflect-Modern
-version:             0.001
+version:             0.002
 abstract:            modernize Lingua::EN::Inflect rule's
 license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.31
 distribution_type:   module
 requires:     
+    Lingua::EN::Inflect:           1.86
     Sub::Override:                 0.07
     Test::More:                    0
 meta-spec:

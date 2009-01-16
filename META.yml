@@ -1,16 +1,24 @@
 --- #YAML:1.0
-name:                Acme-Lingua-EN-Inflect-Modern
-version:             0.003
-abstract:            modernize Lingua::EN::Inflect rule's
-license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.31
-distribution_type:   module
-requires:     
-    Lingua::EN::Inflect:           1.86
-    Sub::Override:                 0.07
-    Test::More:                    0
-meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
-    version: 1.2
+name:               Acme-Lingua-EN-Inflect-Modern
+version:            0.004
+abstract:           modernize Lingua::EN::Inflect rule's
 author:
     - Ricardo SIGNES <rjbs@cpan.org >
+license:            perl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Lingua::EN::Inflect:  1.86
+    Sub::Override:        0.07
+    Test::More:           0
+resources:
+    Repository:  http://github.com/rjbs/acme-lingua-en-inflect-modern
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.48
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

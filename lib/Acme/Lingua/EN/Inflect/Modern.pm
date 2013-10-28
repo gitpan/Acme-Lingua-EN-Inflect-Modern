@@ -1,40 +1,19 @@
-package Acme::Lingua::EN::Inflect::Modern;
-use base qw(Exporter);
-
-use warnings;
 use strict;
+use warnings;
+package Acme::Lingua::EN::Inflect::Modern;
+{
+  $Acme::Lingua::EN::Inflect::Modern::VERSION = '0.005';
+}
+use parent qw(Exporter);
+# ABSTRACT: modernize Lingua::EN::Inflect rule's
 
-use Lingua::EN::Inflect ();
-use Sub::Override;
+use Lingua::EN::Inflect 1.86 ();
+use Sub::Override 0.07;
 
 BEGIN { our %EXPORT_TAGS = %Lingua::EN::Inflect::EXPORT_TAGS };
 
 Exporter::export_ok_tags(qw( ALL ));
 
-=head1 NAME
-
-Acme::Lingua::EN::Inflect::Modern - modernize Lingua::EN::Inflect rule's
-
-=head1 VERSION
-
-version 0.004
-
-  $Id$
-
-=cut
-
-our $VERSION = '0.004';
-
-=head1 SYNOPSIS
-
-Lingua::EN::Inflect is great for converting singular word's to plural's, but
-does not always match modern usage.  This module corrects the most common
-case's.
-
-See L<Lingua::EN::Inflect> for information on using this module, which has an
-identical interface.
-
-=cut
 
 my %todo = map { map { $_ => 1 } @$_ }
            values %Lingua::EN::Inflect::EXPORT_TAGS;
@@ -72,23 +51,46 @@ sub _PL_noun {
   return $plural;
 }
 
-=head1 AUTHOR
 
-Ricardo SIGNES, C<< <rjbs@cpan.org > >>
+1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+Acme::Lingua::EN::Inflect::Modern - modernize Lingua::EN::Inflect rule's
+
+=head1 VERSION
+
+version 0.005
+
+=head1 SYNOPSIS
+
+Lingua::EN::Inflect is great for converting singular word's to plural's, but
+does not always match modern usage.  This module corrects the most common
+case's.
+
+See L<Lingua::EN::Inflect> for information on using this module, which has an
+identical interface.
 
 =head1 BUG'S
 
-Please report any bug's or feature request's the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll automatically be
-notified of progress on your bug as I make change's.
+Please report any bug's or feature request's via the GitHub issue tracker at
+L<https://github.com/rjbs/Acme-Lingua-EN-Inflect-Modern/issues>.  I will be
+notified, and then you'll automatically be notified of progress on
+your bug as I make change's.
 
-=head1 COPYRIGHT & LICENSE
+=head1 AUTHOR
 
-Copyright 2007 Ricardo SIGNES, All Right's Reserved.
+Ricardo SIGNES <rjbs@cpan.org>
 
-This program is free software; you can redistribute it and/or modify it
-under the same term's as Perl itself.
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2007 by Ricardo SIGNES.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-1;

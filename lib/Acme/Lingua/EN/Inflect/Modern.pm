@@ -1,9 +1,7 @@
 use strict;
 use warnings;
 package Acme::Lingua::EN::Inflect::Modern;
-{
-  $Acme::Lingua::EN::Inflect::Modern::VERSION = '0.005';
-}
+$Acme::Lingua::EN::Inflect::Modern::VERSION = '0.006';
 use parent qw(Exporter);
 # ABSTRACT: modernize Lingua::EN::Inflect rule's
 
@@ -14,6 +12,16 @@ BEGIN { our %EXPORT_TAGS = %Lingua::EN::Inflect::EXPORT_TAGS };
 
 Exporter::export_ok_tags(qw( ALL ));
 
+# =head1 SYNOPSIS
+#
+# Lingua::EN::Inflect is great for converting singular word's to plural's, but
+# does not always match modern usage.  This module corrects the most common
+# case's.
+#
+# See L<Lingua::EN::Inflect> for information on using this module, which has an
+# identical interface.
+#
+# =cut
 
 my %todo = map { map { $_ => 1 } @$_ }
            values %Lingua::EN::Inflect::EXPORT_TAGS;
@@ -51,6 +59,14 @@ sub _PL_noun {
   return $plural;
 }
 
+# =head1 BUG'S
+#
+# Please report any bug's or feature request's via the GitHub issue tracker at
+# L<https://github.com/rjbs/Acme-Lingua-EN-Inflect-Modern/issues>.  I will be
+# notified, and then you'll automatically be notified of progress on
+# your bug as I make change's.
+#
+# =cut
 
 1;
 
@@ -58,13 +74,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Acme::Lingua::EN::Inflect::Modern - modernize Lingua::EN::Inflect rule's
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
